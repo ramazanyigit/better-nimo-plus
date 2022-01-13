@@ -1,0 +1,653 @@
+.BNTV_Emote {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.BNTV_Emote .BNTV_Emotetooltiptext {
+  font-size: 10pt;
+  visibility: hidden;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0.671);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 7px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 9;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.BNTV_Emote:hover .BNTV_Emotetooltiptext {
+  visibility: visible;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+.ChatModeTip-container {
+  color: hsla(0, 0%, 100%, 0.6) !important;
+}
+
+.nimo-room .nimo-room__activity .nimo-iframe__wrap {
+  display: none !important;
+}
+
+.nimo-room .nimo-r_recommend-vertical {
+  display: none !important;
+}
+
+.nimo-room .nimo-rm_share {
+  display: none !important;
+}
+
+.nimo-hide-leaderboard .nimo-room .nimo-room__rank {
+  display: none !important;
+}
+
+.nimo-hide-sidebar #side-bar {
+  display: none !important;
+}
+
+.nimo-menu-item[data-id="recharge"] {
+  display: none !important;
+}
+
+.nimo-menu-item[data-id="goLive"] {
+  display: none !important;
+}
+
+.nimo-menu-item[data-id="app"] {
+  display: none !important;
+}
+
+.nimo-header-following {
+  display: none !important;
+}
+
+.nimo-header-chat {
+  display: none !important;
+}
+
+.nimo-room .nimo-anchor-level-badge {
+  display: none !important;
+}
+
+.nimo-room .nimo-rm_meta-rank-enter {
+  display: none !important;
+}
+
+.nimo-hide-gift-messages .MessageList .nimo-scrollbar > div:not(.nimo-room__chatroom__message-item) {
+  display: none !important;
+}
+
+.nimo-hide-follower-messages .MessageList .nimo-room__chatroom__message-item.c2 {
+  display: none !important;
+}
+
+.MessageList .nimo-scrollbar {
+  width: 98% !important;
+  /*   display: flex;
+  flex-direction: column;
+  justify-content: end; */
+}
+
+.nimo-room .float-navigator-container {
+  display: none !important;
+}
+
+.nimo-room .chat-room__enter_banner {
+  display: none !important;
+}
+
+.nimo-room .top-message-list {
+  display: none !important;
+}
+
+.nimo-hide-gift-banner .nimo-room .nimo-gift-banner {
+  display: none !important;
+}
+
+.nimo-room .nimo-room__chatroom__box-gift {
+  display: none !important;
+}
+
+.nimo-room .n-as-theater .nimo-room__gift-shop {
+  display: none !important;
+}
+
+.n-as-theater .nimo-room__theater-section {
+  max-height: 100vh !important;
+}
+
+.nimo-room .nimo-room__nav-tag {
+  display: none !important;
+}
+
+.nimo-room .clan-badge {
+  display: none !important;
+}
+
+.rate-current {
+  height: 100% !important;
+}
+
+.nimo-room__chatroom__message-item {
+  font-size: 14px !important;
+  padding: 3px 0px 3px 15px !important;
+  margin: 0px !important;
+}
+
+.nimo-room__chatroom__message-item:hover {
+  background: #0000000a !important;
+}
+
+.nimo-theme-dark .nimo-room__chatroom__message-item:hover {
+  background: #ffffff36 !important;
+}
+
+.message-filtered {
+  background-color: #ff22224a !important;
+  transition: 300ms !important;
+}
+
+.reply-btn-chat {
+  background: #fff !important;
+  position: absolute !important;
+  top: -8px !important;
+  right: 0 !important;
+  z-index: 20 !important;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 3px !important;
+  padding: 0.3rem !important;
+  cursor: pointer !important;
+  box-shadow: -0.5px -0.5px 1px 1px #1e1e1e29 !important;
+  display: none !important;
+}
+
+.nimo-theme-dark .reply-btn-chat {
+  background: #1e1e1e !important;
+  box-shadow: -0.3px -0.3px 0px 1px #1e1e1e !important;
+}
+
+.reply-btn-chat:hover {
+  background: #f0f0f0 !important;
+}
+
+.nimo-theme-dark .reply-btn-chat:hover {
+  background: #4e4e4e !important;
+}
+
+.nimo-theme-dark .reply-btn-chat:hover {
+  background: #4e4e4e !important;
+}
+
+.nimo-theme-dark .reply-btn-chat svg {
+  fill: #ffffffd6 !important;
+}
+
+.nimo-room__chatroom__message-item:hover .reply-btn-chat {
+  display: block !important;
+}
+
+.nimo-theme-dark .nimo-room .nimo-room__chatroom__message-item__content {
+  color: #d3d3d8 !important;
+  line-height: 1.3 !important;
+}
+
+.nimo-room .nimo-room__chatroom__message-item__info {
+  font-weight: 500 !important;
+}
+
+.nimo-room .nimo-room__head-img {
+  display: none !important;
+}
+
+.nimo-room.has-head-img .nimo-room__main {
+  margin-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+}
+
+.MessageList .nimo-fans-badge__name {
+  display: none !important;
+}
+
+.nimo-room .nimo-cr_decoration_text {
+  display: none !important;
+}
+
+.nimo-room .GiftItemMaker {
+  display: none !important;
+}
+
+.nimo-room__theater-section {
+  max-height: calc(100vh - 60px + 96px) !important;
+  height: 100% !important;
+}
+
+.nimo-theme-dark .nimo-room__main {
+  background: #141414 !important;
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+}
+
+.nimo-room__theater-section > div {
+  margin: 0 !important;
+}
+
+.nimo-room__theater-section > div:first-child {
+  flex-direction: column-reverse !important;
+}
+
+.nimo-room__theater-section > div:nth-child(2) {
+  margin-bottom: 96px !important;
+}
+
+.n-as-theater .nimo-room__theater-section > div:nth-child(2) {
+  margin-bottom: 0px !important;
+}
+
+.n-as-theater {
+  height: 100vh !important;
+}
+
+.nimo-room__player__wrap {
+  flex-grow: 1 !important;
+}
+
+.nimo-rm {
+  justify-self: flex-end !important;
+  margin-top: auto !important;
+}
+
+.nimo-room__main > div:not(:nth-child(3)) {
+  margin: 0 !important;
+}
+
+.nimo-room__main > div:nth-child(3) {
+  margin-top: 2rem !important;
+}
+
+.nimo-player__room-meta {
+  display: none !important;
+}
+
+.nimo-room .n-as-conf:not(.n-as-mrgb-lg) {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  height: calc(100vh + 96px) !important;
+}
+
+.nimo-room .marquee-container {
+  display: none !important;
+}
+
+.nimo-room .n-as-line-under {
+  text-decoration: none !important;
+}
+
+.nimo-room .nimo-rm_title-name {
+  font-size: 19px !important;
+}
+
+.n-as-theater .nimo-room__gift-shop {
+  display: none !important;
+}
+
+.nimo-room .nimo-room__gift-shop {
+  order: -1 !important;
+  padding: 10px !important;
+  height: 96px !important;
+}
+
+.nimo-room .nimo-rm {
+  padding-left: 20px !important;
+}
+
+.video-player {
+  background: #010001 !important;
+}
+
+.nimo-room__gift-shop__gift-list,
+.nimo-room__gift-shop-left {
+  filter: grayscale() !important;
+}
+
+.nimo-room__gift-shop__gift-pack-btn {
+  background-color: #6c47ff !important;
+  border: 1px solid #6c47ff !important;
+  color: #e2bd84 !important;
+  box-shadow: none !important;
+}
+
+.nimo-room__gift-shop__recharge-btn {
+  color: #000 !important;
+}
+
+.nimo-btn-shop {
+  background: #6c47ff !important;
+  color: #fff !important;
+  z-index: 0 !important;
+}
+
+.nimo-currency {
+  margin-left: 0.5rem !important;
+}
+
+.float-navigator-container {
+  display: none !important;
+}
+
+.nimo-player .off-live .recommend-list,
+.nimo-player .off-live .off-live-wrapper .title,
+.nimo-player .off-live .recommend-more {
+  display: none !important;
+}
+
+.SearchBox_Elements_HotList {
+  display: none !important;
+}
+
+.nimo-rm_audience {
+  position: relative;
+}
+
+.nimo-rm_audience .pop-title {
+  position: absolute;
+  display: none;
+  top: 1rem;
+  left: 0;
+  background: black;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.25rem;
+  width: 600px;
+  z-index: 100;
+}
+
+.nimo-rm_audience:hover .pop-title {
+  display: block;
+}
+
+.mark-username {
+  background-color: #18181b;
+  padding: 0 3px;
+  border-radius: 5px;
+  color: #f7f7f8;
+}
+
+.nimo-theme-dark .mark-username {
+  background-color: #f7f7f8;
+  padding: 0 3px;
+  border-radius: 5px;
+  color: #18181b;
+}
+
+.nimo-hide-video-animations .nimo-gift-video-animation {
+  display: none !important;
+}
+
+.nimo-vip-emoticon__list-container {
+  height: 500px !important;
+  max-height: 500px !important;
+}
+
+.emote-hidden {
+  display: none !important;
+}
+
+.bn-settings-menu {
+  position: absolute;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100px;
+  bottom: 100px;
+  margin-top: -20px;
+}
+
+.baaziz_divs_IS {
+  background-color: #535252;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 150px;
+  overflow-x: auto;
+}
+
+.baaziz_divs_IS-item {
+  cursor: default;
+  padding: 7px;
+  font-size: 11pt;
+}
+
+.baaziz_divs_IS-item.selected {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.baaziz_divs_IS-item:hover:not(.selected) {
+  background-color: #707070;
+  color: white;
+}
+
+.mention_Menu {
+  background-color: #535252;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 170px;
+  overflow-x: auto;
+}
+
+.mention_Menu-item {
+  cursor: default;
+  padding: 7px 4px;
+  font-size: 11pt;
+  display: flex;
+  align-items: center;
+}
+
+.mention_Menu-item div {
+  margin-right: 7px;
+}
+
+.mention_Menu-item.selected {
+  background-color: rgb(100, 100, 100);
+  color: #fff;
+}
+
+.mention_Menu-item:hover:not(.selected) {
+  background-color: #505050;
+  color: #f0f0f0;
+}
+
+/**/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(48, 48, 48);
+}
+
+.BNTV_Settings {
+  cursor: pointer;
+  font-size: 16pt;
+  font-family: sans-serif;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  border-radius: 16px;
+  background-color: black;
+  color: #440097;
+}
+.BNTV_Settings:hover:not(.selected) {
+  background-color: rgba(0, 0, 0, 0.62);
+}
+
+textarea {
+  font: inherit;
+}
+
+.BNTV_Settings_MENU {
+  background-color: #2b2b2b;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #444;
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 15px;
+  position: absolute;
+  bottom: 170px;
+  overflow-x: auto;
+  z-index: 9002;
+}
+
+.BNTV_ITEM_H {
+  width: 100%;
+  text-align: center;
+  background-color: #333333;
+  height: 35px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#BNTV_MENU_hide {
+  font-size: 10pt;
+  height: 24px;
+  text-align: center;
+  margin: 3px;
+  margin-right: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+  padding: 0px 5px;
+  border-radius: 5px;
+}
+#BNTV_MENU_hide:hover {
+  background-color: #666;
+}
+
+.BNTV_Settings_MENU_ITEM {
+  background-color: #585858;
+  font-size: 16pt;
+  height: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+#BNTV_ButtonC {
+  cursor: pointer;
+  float: right;
+  width: 80px;
+  height: 30px;
+  font-size: 16pt;
+  color: white;
+  background-color: #440097;
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+#BNTV_ButtonC:hover {
+  background-color: #440097a8;
+}
+
+.BNTV_T {
+  font-size: 12pt;
+  flex-grow: 1;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/*https://www.w3schools.com/howto/howto_css_switch.asp*/
+
+.switch {
+  position: relative;
+  width: 36px;
+  height: 18px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #7221f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #7221f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

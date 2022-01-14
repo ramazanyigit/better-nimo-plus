@@ -1,4 +1,4 @@
-# BetterNimo+
+# REKKITZ+ (BetterNimo)
 
 Improved Nimo.tv interface, with less visual clutter and improvements.
 It cleans the visual crowd on NimoTV and offers the user a simpler design, as well as features such as tagging the user, reducing the crowd of messages in the chat.

@@ -469,11 +469,8 @@ const isINColl = (name) => {
   return false;
 };
 
-function injectSettingsMenu(e) {
-  if (
-    !e ||
-    !e.classList
-  ) {
+function injectSettingsMenuIcon(e) {
+  if (!e || !e.classList) {
     return;
   }
 
@@ -484,7 +481,15 @@ function injectSettingsMenu(e) {
 
   iconWrapper = iconWrapper[0];
   iconWrapper.innerHTML +=
-    '<svg class="n-as-fs24 n-as-pointer c2 c-hover1 n-as-mrgh" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>';
+    '<svg class="n-as-fs24 n-as-pointer c2 c-hover1 n-as-mrgh" id="rkzplus-settings-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>';
+
+  injectSettingsMenu(document.getElementsByClassName("nimo-room__chatroom")[0]);
+}
+
+function injectSettingsMenu(e) {
+  if (!e || !e.classList || !e.classList.contains("nimo-room__chatroom")) {
+    return;
+  }
 
   var block_to_insert;
   var container_block;
@@ -493,7 +498,7 @@ function injectSettingsMenu(e) {
   block_to_insert.className = "BNTV_Settings_MENU";
   block_to_insert.style.display = "none";
   block_to_insert.innerHTML =
-    '<div class="BNTV_ITEM_H"><div class="BNTV_T">BetterNimo+ Settings</div><div id="BNTV_MENU_hide">Close</div></div>' +
+    '<div class="BNTV_ITEM_H"><div class="BNTV_T">REKKITZ+ Settings</div><div id="BNTV_MENU_hide">Close</div></div>' +
     '<div class="BNTV_Settings_MENU_ITEM">' +
     '<span class="BNTV_T">Hide chat</span>' +
     '<label class="switch">' +
@@ -543,8 +548,8 @@ function injectSettingsMenu(e) {
     '<span class="slider round"></span>' +
     "</label>" +
     "</div>";
-  container_block = document.getElementsByClassName("nimo-room__rank")[0];
-  container_block.parentNode.insertBefore(block_to_insert, container_block);
+  container_block = document.getElementsByClassName("nimo-room__chatroom")[0];
+  container_block.parentNode.parentNode.prepend(block_to_insert);
 
   if (settings.hideSidebar) {
     document.body.classList.add("nimo-hide-sidebar");
@@ -576,7 +581,7 @@ function injectSettingsMenu(e) {
     document.getElementById("BNTV_CB6").checked = true;
   }
 
-  iconWrapper.onclick = function () {
+  document.getElementById("rkzplus-settings-icon").onclick = function () {
     const menu = document.getElementById("BNTV_Settings_MENU");
     if (menu.style.display === "none") {
       menu.style.display = "block";
@@ -691,7 +696,7 @@ new MutationObserver((e) => {
           injectEmotesIfNotIncluded(e);
           fixChromeVideoBug(e);
           injectMentions(e);
-          injectSettingsMenu(e);
+          injectSettingsMenuIcon(e);
           pushStreamerName(e);
         }
       }

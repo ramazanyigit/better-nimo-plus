@@ -7,8 +7,7 @@
   "permissions": [
     "https://*.nimo.tv/*",
     "webRequest",
-    "webRequestBlocking",
-    "activeTab"
+    "webRequestBlocking"
   ],
   "content_scripts": [
     {

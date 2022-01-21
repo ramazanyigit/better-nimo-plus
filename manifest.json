@@ -1,10 +1,10 @@
 {
-  "update_url": "https://clients2.google.com/service/update2/crx",
   "name": "__MSG_appName__",
-  "version": "0.2",
+  "version": "0.3",
   "description": "__MSG_appDesc__",
   "default_locale": "en",
   "permissions": [
+    "https://gist.githubusercontent.com/ramazanyigit/*",
     "https://*.nimo.tv/*",
     "webRequest",
     "webRequestBlocking"
@@ -13,7 +13,20 @@
     {
       "matches": ["https://*.nimo.tv/*"],
       "css": ["style.css"],
-      "js": ["mention-emote.js", "mention-chat.js", "script.js"]
+      "js": [
+        "rkzplus/lib/mentionify.js",
+        "rkzplus/core.js",
+        "rkzplus/streamer.js",
+        "rkzplus/appearance.js",
+        "rkzplus/mention.js",
+        "rkzplus/timer.js",
+        "rkzplus/user.js",
+        "rkzplus/chat.js",
+        "rkzplus/emote.js",
+        "rkzplus/settings.js",
+        "rkzplus/settings-menu.js",
+        "script.js"
+      ]
     }
   ],
   "background": {

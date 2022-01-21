@@ -1,0 +1,74 @@
+{
+  "appName": {
+    "message": "REKKITZ+"
+  },
+  "appDesc": {
+    "message": "NimoTV için geliştirilmiş arayüz eklentisidir."
+  },
+  "popularityDesc": {
+    "message": "Popülerlik seviyesi bir puan sistemidir. Popülerlik puanı yalnızca izleyici sayısından oluşmaz, yayın esnasında gönderilen hediyeler, aldığın bağışlar da hesaplamalara dahil edilir. Kanalı ziyaret eden izleyici sayısının, yoncaların ve sohbet akışının da popülerlik puanına etkisi vardır."
+  },
+  "settingsTitle": {
+    "message": "REKKITZ+ Ayarları"
+  },
+  "settingsCloseButton": {
+    "message": "Kapat"
+  },
+  "settingHideSidebar": {
+    "message": "Yan paneli gizle"
+  },
+  "settingHideLeaderboard": {
+    "message": "Lider tablosunu gizle"
+  },
+  "settingHideChat": {
+    "message": "Sohbeti gizle"
+  },
+  "settingHideTopLeftGiftBanners": {
+    "message": "Sol üstteki bağışları gizle"
+  },
+  "settingHideAnimatedGifts": {
+    "message": "Animasyonlu bağışları gizle"
+  },
+  "settingHideFollowerMessages": {
+    "message": "Takipçi bildirimlerini gizle"
+  },
+  "settingHideChatGiftMessages": {
+    "message": "Bağış bildirimlerini gizle"
+  },
+  "settingHideEyeCatchingMessages": {
+    "message": "Dikkat çekici mesajları gizle"
+  },
+  "settingHideLiveTime": {
+    "message": "Canlı yayın süresini gizle"
+  },
+  "settingHideStreamRecommendations": {
+    "message": "Tavsiye edilen yayıncıları gizle"
+  },
+  "settingEnableMentions": {
+    "message": "Bahsetmeleri belirginleştir"
+  },
+  "settingEnableEmotes": {
+    "message": "Emoteları göster"
+  },
+  "settingEnableHyperlinks": {
+    "message": "Sohbette bağlantıları işaretle"
+  },  
+  "settingHideFanNotifications": {
+    "message": "Hayran bildirimlerini gizle"
+  },  
+  "settingHideSystemMessages": {
+    "message": "Sistem mesajlarını gizle"
+  },  
+  "settingHidePickMeMessages": {
+    "message": "PickMe mesajlarını gizle"
+  },  
+  "settingHideSharingMessages": {
+    "message": "Yayın paylaşımı bildirimlerini gizle"
+  },  
+  "settingHideBadges": {
+    "message": "Rozetleri gizle"
+  },
+  "settingHideGiftShop": {
+    "message": "Hediye mağazasını gizle"
+  }
+}

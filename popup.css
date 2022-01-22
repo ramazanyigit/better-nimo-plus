@@ -1,0 +1,154 @@
+body {
+  background: transparent;
+  background: #323232;
+  min-width: 500px;
+  color: #fff;
+  font-family: "Roboto", sans-serif !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  color: #fafafa;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  background: #222;
+}
+
+.header > *,
+.content-wrapper {
+  padding: 1rem;
+}
+
+a,
+a:visited {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#enable-button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: #faeb1e;
+  border: 1px solid #faeb1e;
+  border-radius: 5px;
+  color: #323232;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#links {
+  margin-top: 1rem;
+  margin-bottom: 1;
+}
+
+.stream-link {
+  display: flex;
+  background: #666;
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
+  align-items: center;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.stream-link img {
+  height: 45px;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+#status .stream-link img {
+  height: 80px;
+}
+
+#status .stream-link {
+  margin-bottom: 1rem;
+}
+
+.stream-link > * {
+  flex-grow: 0;
+}
+
+.stream-link > .content {
+  flex-grow: 1;
+}
+
+#status .stream-link .stream-title {
+  margin-bottom: 0.5rem;
+}
+
+.live-icon {
+  background: #ff6969;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+
+.stream-link .remove-button,
+.add-button {
+  fill: #dadada;
+  background: transparent;
+  font-size: 0.875rem;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.stream-link .remove-button:hover {
+  fill: #ff4949;
+}
+
+.add-button:hover {
+  fill: #faeb1e;
+  color: #faeb1e;
+}
+
+.no-follow-links {
+  font-weight: normal !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+input {
+  border: 1px solid #666;
+  background: #555;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+button.add-url {
+  border-radius: 5px;
+  border: 1px solid #666;
+  background: #555;
+  color: #fff;
+  padding: 5px;
+  font-size: 0.875rem;
+}

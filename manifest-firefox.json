@@ -3,7 +3,13 @@
   "version": "0.3.4",
   "description": "__MSG_appDesc__",
   "default_locale": "en",
-  "permissions": ["https://*.nimo.tv/*", "webRequest", "webRequestBlocking"],
+  "permissions": [
+    "https://rkz-plus.kurabiye.dev/*",
+    "https://*.nimo.tv/*",
+    "webRequest",
+    "webRequestBlocking",
+    "storage"
+  ],
   "content_scripts": [
     {
       "matches": ["https://*.nimo.tv/*"],
@@ -24,7 +30,7 @@
       ]
     }
   ],
-  "optional_permissions": ["notifications", "storage", "activeTab"],
+  "optional_permissions": ["notifications", "activeTab"],
   "background": {
     "scripts": [
       "rkzplus/lib/browser-detect.js",

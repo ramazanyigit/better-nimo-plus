@@ -24,7 +24,7 @@
       ]
     }
   ],
-  "optional_permissions": ["notifications", "storage", "activeTab"],
+  "optional_permissions": ["background", "notifications", "storage", "activeTab"],
   "background": {
     "scripts": [
       "rkzplus/lib/browser-detect.js",

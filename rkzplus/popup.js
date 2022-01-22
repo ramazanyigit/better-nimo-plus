@@ -21,7 +21,7 @@ localizeHtmlPage();
 
 chrome.permissions.contains(
   {
-    permissions: ["background", "storage", "notifications", "activeTab"],
+    permissions: WATCHER_PERMISSIONS,
   },
   (result) => {
     if (result) {
@@ -37,7 +37,7 @@ function initEnable() {
   document.querySelector("#enable-button").addEventListener("click", function () {
     chrome.permissions.request(
       {
-        permissions: ["background", "storage", "notifications", "activeTab"],
+        permissions: WATCHER_PERMISSIONS,
       },
       (granted) => {
         // The callback argument will be true if the user granted the permissions.

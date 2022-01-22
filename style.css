@@ -407,20 +407,20 @@ body {
   display: block;
 }
 
-.mark-username,
-.nickname {
+.nimo-scrollbar .mark-username,
+.nimo-scrollbar .nickname {
   background-color: #18181b;
   padding: 0 3px;
   border-radius: 5px;
-  color: #f7f7f8;
+  color: #f7f7f8 !important;
 }
 
-.nimo-theme-dark .mark-username,
-.nimo-theme-dark .nickname {
+.nimo-theme-dark .nimo-scrollbar .mark-username,
+.nimo-theme-dark .nimo-scrollbar .nickname {
   background-color: #f7f7f8;
   padding: 0 3px;
   border-radius: 5px;
-  color: #18181b;
+  color: #18181b !important;
 }
 
 .nimo-hide-video-animations .nimo-gift-video-animation {

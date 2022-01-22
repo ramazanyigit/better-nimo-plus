@@ -4,6 +4,11 @@
   border-bottom: 1px dotted black;
 }
 
+.emoticon-item {
+  position: relative;
+}
+
+.emoticon-item .BNTV_Emotetooltiptext,
 .BNTV_Emote .BNTV_Emotetooltiptext {
   font-size: 10pt;
   visibility: hidden;
@@ -16,12 +21,31 @@
 
   /* Position the tooltip */
   position: absolute;
-  z-index: 9;
+  z-index: 100;
   bottom: 100%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -40px;
 }
 
+.emoticon-item .BNTV_Emotetooltiptext {
+  width: 120px;
+  margin-left: -60px;
+  pointer-events: none;
+}
+
+.emoticon-item:nth-child(8n+1) .BNTV_Emotetooltiptext {
+  margin-left: -20px;
+}
+
+.emoticon-item:nth-child(8n+2) .BNTV_Emotetooltiptext {
+  margin-left: -50px;
+}
+
+.emoticon-item:nth-child(8n+8) .BNTV_Emotetooltiptext {
+  margin-left: -100px;
+}
+
+.emoticon-item:hover .BNTV_Emotetooltiptext,
 .BNTV_Emote:hover .BNTV_Emotetooltiptext {
   visibility: visible;
 }
@@ -31,11 +55,16 @@ body {
   overflow-x: hidden !important;
 }
 
+body {
+  overflow-y: hidden !important;
+}
+
 .ChatModeTip-container {
   color: hsla(0, 0%, 100%, 0.6) !important;
 }
 
-.nimo-room .nimo-room__activity .nimo-iframe__wrap {
+.nimo-room .nimo-room__activity .nimo-iframe__wrap,
+.stream-manager-live-view__activity .nimo-iframe__wrap {
   display: none !important;
 }
 
@@ -71,23 +100,15 @@ body {
   display: none !important;
 }
 
-.nimo-header-chat {
+/* .nimo-header-chat {
   display: none !important;
-}
+} */
 
 .nimo-room .nimo-anchor-level-badge {
   display: none !important;
 }
 
 .nimo-room .nimo-rm_meta-rank-enter {
-  display: none !important;
-}
-
-.nimo-hide-gift-messages .MessageList .nimo-scrollbar > div:not(.nimo-room__chatroom__message-item) {
-  display: none !important;
-}
-
-.nimo-hide-follower-messages .MessageList .nimo-room__chatroom__message-item.c2 {
   display: none !important;
 }
 
@@ -110,11 +131,9 @@ body {
   display: none !important;
 }
 
-.nimo-hide-gift-banner .nimo-room .nimo-gift-banner {
-  display: none !important;
-}
-
-.nimo-room .nimo-room__chatroom__box-gift {
+.nimo-hide-gift-banner .nimo-room__chatroom .nimo-gift-banner,
+/* .nimo-hide-gift-banner .nimo-room__chatroom .nimo-room__chatroom__box-gift, */
+.nimo-hide-gift-banner .nimo-room__chatroom .chat-room__enter_banner {
   display: none !important;
 }
 
@@ -132,10 +151,6 @@ body {
 
 .nimo-room .clan-badge {
   display: none !important;
-}
-
-.rate-current {
-  height: 100% !important;
 }
 
 .nimo-room__chatroom__message-item {
@@ -233,6 +248,7 @@ body {
   height: 100% !important;
 }
 
+
 .nimo-theme-dark .nimo-room__main {
   background: #141414 !important;
   padding-bottom: 0px !important;
@@ -243,13 +259,22 @@ body {
   margin: 0 !important;
 }
 
-.nimo-room__theater-section > div:first-child {
-  flex-direction: column-reverse !important;
+.n-as-theater .nimo-room__theater-section > div:first-child {
+  height: 100vh !important;
 }
 
-.nimo-room__theater-section > div:nth-child(2) {
-  margin-bottom: 96px !important;
+.nimo-room__theater-section > div:first-child {
+  flex-direction: column-reverse !important;
+  height: calc(100vh - 60px) !important;
 }
+
+/* .nimo-room__theater-section > div:nth-child(2) {
+  margin-bottom: 96px !important;
+} */
+
+/* .nimo-hide-gift-shop .nimo-room__theater-section > div:nth-child(2) {
+  margin-bottom: 0px !important;
+} */
 
 .n-as-theater .nimo-room__theater-section > div:nth-child(2) {
   margin-bottom: 0px !important;
@@ -332,6 +357,10 @@ body {
   color: #000 !important;
 }
 
+.nimo-hide-fan-messages .MessageList .nimo-scrollbar > .n-as-mrg-xs.c2 {
+  display: none !important;
+}
+
 .nimo-btn-shop {
   background: #6c47ff !important;
   color: #fff !important;
@@ -346,9 +375,10 @@ body {
   display: none !important;
 }
 
-.nimo-player .off-live .recommend-list,
-.nimo-player .off-live .off-live-wrapper .title,
-.nimo-player .off-live .recommend-more {
+.nimo-hide-recommended-streamers .nimo-r_recommend,
+.nimo-hide-recommended-streamers .nimo-player .off-live .recommend-list,
+.nimo-hide-recommended-streamers .nimo-player .off-live .off-live-wrapper .title,
+.nimo-hide-recommended-streamers .nimo-player .off-live .recommend-more {
   display: none !important;
 }
 
@@ -377,18 +407,20 @@ body {
   display: block;
 }
 
-.mark-username {
+.nimo-scrollbar .mark-username,
+.nimo-scrollbar .nickname {
   background-color: #18181b;
   padding: 0 3px;
   border-radius: 5px;
-  color: #f7f7f8;
+  color: #f7f7f8 !important;
 }
 
-.nimo-theme-dark .mark-username {
+.nimo-theme-dark .nimo-scrollbar .mark-username,
+.nimo-theme-dark .nimo-scrollbar .nickname {
   background-color: #f7f7f8;
   padding: 0 3px;
   border-radius: 5px;
-  color: #18181b;
+  color: #18181b !important;
 }
 
 .nimo-hide-video-animations .nimo-gift-video-animation {
@@ -396,8 +428,32 @@ body {
 }
 
 .nimo-vip-emoticon__list-container {
-  height: 500px !important;
-  max-height: 500px !important;
+  height: 400px !important;
+  max-height: 400px !important;
+}
+
+.nimo-vip-emoticon .nimo-vip-emoticon__img > picture img {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.nimo-vip-emoticon .emoticon-item {
+  width: 34px !important;
+  height: 34px !important;
+  margin: 0 2px 5px !important;
+}
+
+.nimo-vip-emoticon {
+  position: relative;
+}
+
+.nimo-vip-emoticon .nimo-vip-emoticon__text {
+  display: none;
+  position: absolute;
+}
+
+.nimo-vip-emoticon:hover .nimo-vip-emoticon__text {
+  display: block;
 }
 
 .emote-hidden {
@@ -506,6 +562,16 @@ body {
   background-color: rgba(0, 0, 0, 0.62);
 }
 
+.RkzPlus_Settings_MENU_HEADER {
+  margin: 8px;
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.RkzPlus_Settings_MENU_HEADER:first-child {
+  margin-top: 0;
+}
+
 textarea {
   font: inherit;
 }
@@ -515,13 +581,18 @@ textarea {
   color: white;
   border-radius: 5px;
   border: 1px solid #444;
-  width: 300px;
+  width: 320px;
   margin-top: 20px;
-  margin-left: 15px;
+  margin-left: 10px;
   position: absolute;
-  bottom: 170px;
+  bottom: 100px;
   overflow-x: auto;
   z-index: 9002;
+}
+
+.BNTV_Settings_MENU_CONTENT {
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .BNTV_ITEM_H {
@@ -557,10 +628,10 @@ textarea {
 
 .BNTV_Settings_MENU_ITEM {
   background-color: #585858;
-  font-size: 16pt;
-  height: 30px;
-  border-radius: 15px;
-  margin: 5px;
+  font-size: 14pt;
+  height: 25px;
+  border-radius: 5px;
+  margin: 7px;
   display: flex;
   align-items: center;
 }
@@ -583,7 +654,7 @@ textarea {
 }
 
 .BNTV_T {
-  font-size: 12pt;
+  font-size: 10pt;
   flex-grow: 1;
   text-align: left;
   padding-left: 10px;
@@ -593,8 +664,8 @@ textarea {
 
 .switch {
   position: relative;
-  width: 36px;
-  height: 18px;
+  width: 30px;
+  height: 14px;
   margin-left: 8px;
   margin-right: 8px;
 }
@@ -622,25 +693,26 @@ textarea {
   content: "";
   height: 10px;
   width: 10px;
-  left: 4px;
-  bottom: 4px;
+  left: 2px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  border-color: #ccc;
 }
 
 input:checked + .slider {
-  background-color: #7221f3;
+  background-color: rgb(255, 212, 0);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #7221f3;
+  box-shadow: 0 0 1px rgb(255, 212, 0);
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(18px);
-  -ms-transform: translateX(18px);
-  transform: translateX(18px);
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
 }
 
 /* Rounded sliders */
@@ -650,4 +722,123 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@keyframes acc-color-change {
+  from {
+    color: #ff4949;
+  }
+  to {
+    color: #853f3f;
+  }
+}
+
+@keyframes acc-back-change {
+  from {
+    background-color: #ff4949;
+  }
+  to {
+    background-color: #853f3f;
+  }
+}
+
+.nimo-rm_toolbar_live_time {
+  display: flex;
+  justify-content: right;
+  color: #ff4949;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nimo-rm_toolbar_live_time.not-accurate {
+  animation: acc-color-change 1s infinite;
+}
+
+.nimo-rm_toolbar_live_time.not-accurate .live-time-icon {
+  animation: acc-back-change 1s infinite;
+}
+
+.nimo-rm_toolbar_live_time {
+  border-bottom: 1;
+}
+
+.nimo-rm_toolbar_live_time .live-time-content {
+  width: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nimo-rm_toolbar_live_time .live-time-content .live-time-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff4949;
+  display: block;
+}
+
+.nimo-rm_toolbar_live_time .live-time-content .live-time-text {
+  padding-left: 5px;
+}
+
+.rkz-chat-link,
+.rkz-chat-link:visited,
+.rkz-chat-link:focus {
+  color: #9670ff;
+}
+
+.nimo-player .controls .rate-control .rate-control_list .rate-control_item {
+  height: 30px;
+  line-height: 30px;
+}
+
+.speed-rate-control {
+  margin-left: 0 !important;
+}
+
+.speed-rate-control .rate-control_list {
+  display: none;
+}
+
+.speed-rate-control:hover .rate-control_list {
+  display: block;
+}
+
+.nimo-hide-gift-messages .MessageList .nimo-scrollbar > div.c2:not(.nimo-room__chatroom__message-item),
+.nimo-hide-follower-messages .MessageList .nimo-room__chatroom__message-item.c2,
+.nimo-hide-eye-catching-messages .MessageList .nimo-scrollbar > .nimo-room__pay-chat-message-item,
+.nimo-hide-eye-catching-messages .nimo-room__pay-chat-top-message-list,
+.nimo-hide-pickme-messages .nimo-scrollbar > .pick-me-msg,
+.nimo-hide-share-messages .nimo-scrollbar > .chatroomShareComp-container,
+.nimo-hide-system-messages .nimo-scrollbar > .c3 {
+  display: none !important;
+}
+
+.M-subscribe .nimo-icon-user:before,
+.sidebar-follow-items .nimo-icon-audience:before,
+.nimo-rm .nimo-icon-audience:before,
+.nimo-rc_meta__audience .nimo-icon-audience:before {
+  content: "" !important;
+}
+
+.nimo-scrollbar > div:not(.nimo-room__chatroom__message-item) {
+  margin-left: 15px;
+}
+
+.nimo-hide-badges .nimo-scrollbar .nimo-user-level-badge,
+.nimo-hide-badges .nimo-scrollbar .nimo-cr_decoration_icon:not(.rkz-custom-badge) {
+  display: none !important;
+}
+
+.nimo-hide-badges .nimo-scrollbar .nimo-cr_decoration {
+  margin-right: 2px !important;
+}
+
+.nimo-cr_decoration {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nimo-hide-gift-shop .nimo-room__gift-shop {
+  display: none !important;
 }

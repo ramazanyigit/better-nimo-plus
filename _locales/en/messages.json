@@ -1,8 +1,143 @@
 {
   "appName": {
-      "message": "REKKITZ+"
+    "message": "REKKITZ+"
   },
   "appDesc": {
-      "message": "Improved Nimo.tv interface, with less visual clutter and improvements."
+    "message": "Improved Nimo.tv interface, with less visual clutter and improvements."
+  },
+  "popularityDesc": {
+    "message": "The popularity level is a point system. The popularity score does not only consist of the number of viewers, the gifts sent during the broadcast and the donations you receive are also included in the calculations. The number of viewers visiting the channel, lucky clovers and chat stream also have an impact on the popularity score."
+  },
+  "emoteFrequentlyUsed": {
+    "message": "Frequently Used"
+  },
+  "emoteGlobal": {
+    "message": "Global Emotes"
+  },
+  "emoteSearchPlaceholder": {
+    "message": "Search emote..."
+  },
+  "settingsTitle": {
+    "message": "REKKITZ+ Settings"
+  },
+  "settingsCloseButton": {
+    "message": "Close"
+  },
+  "settingHideSidebar": {
+    "message": "Hide sidebar"
+  },
+  "settingHideLeaderboard": {
+    "message": "Hide leaderboard"
+  },
+  "settingHideChat": {
+    "message": "Hide chat"
+  },
+  "settingHideTopLeftGiftBanners": {
+    "message": "Hide top left gift banners"
+  },
+  "settingHideAnimatedGifts": {
+    "message": "Hide animated gifts"
+  },
+  "settingHideFollowerMessages": {
+    "message": "Hide follower notifications"
+  },
+  "settingHideChatGiftMessages": {
+    "message": "Hide chat gift messages"
+  },
+  "settingHideEyeCatchingMessages": {
+    "message": "Hide eye-catching messages"
+  },
+  "settingHideLiveTime": {
+    "message": "Hide stream live time"
+  },
+  "settingHideStreamRecommendations": {
+    "message": "Hide recommended streamers"
+  },
+  "settingEnableMentions": {
+    "message": "Enable mention highlighting"
+  },
+  "settingEnableEmotes": {
+    "message": "Show emotes in chat"
+  },
+  "settingEnableHyperlinks": {
+    "message": "Highlight links in chat"
+  },
+  "settingHideFanNotifications": {
+    "message": "Hide fan notifications"
+  },
+  "settingHideSystemMessages": {
+    "message": "Hide system messages"
+  },
+  "settingHidePickMeMessages": {
+    "message": "Hide PickMe messages"
+  },
+  "settingHideSharingMessages": {
+    "message": "Hide stream sharing notifications"
+  },
+  "settingHideBadges": {
+    "message": "Hide user badges in chat"
+  },
+  "settingHideGiftShop": {
+    "message": "Hide gift shop"
+  },
+  "settingAppearance": {
+    "message": "Appearance"
+  },
+  "settingNotifications": {
+    "message": "Chat Notifications"
+  },
+  "settingMessages": {
+    "message": "Chat Messages"
+  },
+  "watcherTitle": {
+    "message": "REKKITZ+ Watcher Beta"
+  },
+  "watcherEnableButton": {
+    "message": "Enable watcher"
+  },
+  "watcherNoFollowLinks": {
+    "message": "There is no links added to watch."
+  },
+  "watcherIsPlaying": {
+    "message": "$name$ <span style='font-size: .8rem; font-weight: normal;'>is playing $game$</span>",
+    "placeholders": {
+      "game": {
+        "content": "$2"
+      },
+      "name": {
+        "content": "$1"
+      }
+    }
+  },
+  "watcherIsPlayingNotification": {
+    "message": "$name$ is playing $game$",
+    "placeholders": {
+      "game": {
+        "content": "$2"
+      },
+      "name": {
+        "content": "$1"
+      }
+    }
+  },
+  "watcherIsLive": {
+    "message": "$name$ is live!",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      }
+    }
+  },
+  "watcherOffline": {
+    "message": "Last stream:"
+  },
+  "watcherCurrentlyWatching": {
+    "message": "Currently watching"
+  },
+  "watcherAddedChannels": {
+    "message": "Followed channels"
+  },
+  "watcherAdd": {
+    "message": "Add"
   }
 }

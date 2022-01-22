@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REKKITZ+ Watcher Beta</title>
+
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="header d-flex">
+      <div class="grow-1">__MSG_watcherTitle__</div>
+      <div class="grow-0" style="display: none; align-items:center; ">
+        <button id="add-show" class="add-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="16px" height="16px">
+            <path
+              d="M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M37,26H26v11h-2V26H13v-2h11V13h2v11h11V26z"
+            />
+          </svg> <div style="padding-left: 2px; ">URL</div>
+        </button>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div id="add-content" class="d-flex" style="display: none; margin-bottom: 1rem;">
+        <input id="url" placeholder="URL" class="grow-1" />
+        <button id="submit" class="grow-0 add-url" style="margin-left: 1rem;">__MSG_watcherAdd__</button>
+      </div>
+      <div id="status"></div>
+      <div class="text-center">
+        <button id="enable-button">__MSG_watcherEnableButton__</button>
+      </div>
+      <div id="active-content" style="display: none;">
+        <h3>__MSG_watcherAddedChannels__</h3>
+        <div id="links"></div>
+      </div>
+    </div>
+
+    <script src="rkzplus/lib/browser-detect.js"></script>
+    <script src="rkzplus/lib/moment-with-locales.min.js"></script>
+    <script src="rkzplus/watcher-constants.js"></script>
+    <script src="rkzplus/popup.js"></script>
+  </body>
+</html>

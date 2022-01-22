@@ -1,0 +1,55 @@
+{
+  "name": "__MSG_appName__",
+  "version": "0.3.5",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "permissions": [
+    "https://rkz-plus.kurabiye.dev/*",
+    "https://*.nimo.tv/*",
+    "webRequest",
+    "webRequestBlocking",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.nimo.tv/*"],
+      "css": ["style.css"],
+      "js": [
+        "rkzplus/lib/mentionify.js",
+        "rkzplus/core.js",
+        "rkzplus/streamer.js",
+        "rkzplus/appearance.js",
+        "rkzplus/mention.js",
+        "rkzplus/timer.js",
+        "rkzplus/user.js",
+        "rkzplus/chat.js",
+        "rkzplus/emote.js",
+        "rkzplus/settings.js",
+        "rkzplus/settings-menu.js",
+        "script.js"
+      ]
+    }
+  ],
+  "optional_permissions": ["notifications", "activeTab"],
+  "background": {
+    "scripts": [
+      "rkzplus/lib/browser-detect.js",
+      "rkzplus/watcher-constants.js",
+      "background-source-feed.js",
+      "background-watcher.js"
+    ],
+    "persistent": true
+  },
+  "web_accessible_resources": ["images/mod_icon.png", "images/admin_icon.png"],
+  "icons": {
+    "16": "images/16.png",
+    "32": "images/32.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "browser_action": {
+    "default_icon": "images/48.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}

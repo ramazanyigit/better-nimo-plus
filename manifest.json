@@ -1,10 +1,9 @@
 {
   "name": "__MSG_appName__",
-  "version": "0.3",
+  "version": "0.3.4",
   "description": "__MSG_appDesc__",
   "default_locale": "en",
   "permissions": [
-    "https://gist.githubusercontent.com/ramazanyigit/*",
     "https://*.nimo.tv/*",
     "webRequest",
     "webRequestBlocking"
@@ -29,8 +28,10 @@
       ]
     }
   ],
+  "optional_permissions": ["background", "notifications", "storage", "activeTab"],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+    "persistent": true
   },
   "web_accessible_resources": ["images/mod_icon.png", "images/admin_icon.png"],
   "icons": {
@@ -38,6 +39,10 @@
     "32": "images/32.png",
     "48": "images/48.png",
     "128": "images/128.png"
+  },
+  "browser_action": {
+    "default_icon": "images/48.png",
+    "default_popup": "popup.html"
   },
   "manifest_version": 2
 }

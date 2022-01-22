@@ -89,7 +89,7 @@ RkzPlus.SettingsMenu = {
     settingsMenu.className = "BNTV_Settings_MENU_CONTENT";
     settingsMenuWrapper.append(settingsMenu);
 
-    settingsMenu.append(this.createMenuHeader("Appearance"));
+    settingsMenu.append(this.createMenuHeader(chrome.i18n.getMessage("settingAppearance")));
 
     /// OPTION 1: HIDE SIDEBAR
     settingsMenu.append(
@@ -160,7 +160,7 @@ RkzPlus.SettingsMenu = {
       })
     );
 
-    settingsMenu.append(this.createMenuHeader("Chat Notifications"));
+    settingsMenu.append(this.createMenuHeader(chrome.i18n.getMessage("settingNotifications")));
     settingsMenu.append(
       this.createMenuItem(
         chrome.i18n.getMessage("settingHideTopLeftGiftBanners"),
@@ -210,7 +210,7 @@ RkzPlus.SettingsMenu = {
       )
     );
 
-    settingsMenu.append(this.createMenuHeader("Messages"));
+    settingsMenu.append(this.createMenuHeader(chrome.i18n.getMessage("settingMessages")));
 
     /// OPTION 11: ENABLE MENTIONS
     settingsMenu.append(this.createMenuItem(chrome.i18n.getMessage("settingEnableMentions"), "enableMentions"));

@@ -72,13 +72,21 @@ RkzPlus.Mention = {
             .filter(
               (el_array) =>
                 el_array &&
-                (el_array.word.toLowerCase().startsWith(prefix.toLowerCase()) ||
-                  el_array.word.toUpperCase().startsWith(prefix.toUpperCase()))
+                (el_array.word.toLowerCase().includes(prefix.toLowerCase()) ||
+                  el_array.word.toUpperCase().includes(prefix.toUpperCase()))
             )
-            .sort((a, b) => b.popularity - a.popularity + a.word.localeCompare(b.word));
+            .sort((a, b) => {
+              const diff = b.popularity - a.popularity;
+
+              if (diff !== 0) {
+                return diff;
+              }
+
+              return a.word.localeCompare(b.word);
+            });
     };
 
-    const replaceFn = (emote) =>  `${emote.word}`;
+    const replaceFn = (emote) => `${emote.word}`;
 
     const menuItemFn = (el_array, setItem, selected) => {
       const div = document.createElement("div");

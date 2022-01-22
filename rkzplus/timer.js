@@ -27,7 +27,7 @@ RkzPlus.Timer = {
     }
 
     const diff = (new Date() - new Date(startTime)) / 1000;
-    const timer = this.create(toolbarEl, diff);
+    const timer = RkzPlus.Timer.create(toolbarEl, diff);
 
     if (!streamerData.liveStreamStatus) {
       const check = async function () {
@@ -39,7 +39,7 @@ RkzPlus.Timer = {
         const streamerData = await RkzPlus.Streamer.getData();
 
         if (streamerData.liveStreamStatus) {
-          this.create(toolbarEl, (new Date() - new Date(streamerData.startLiveTime * 1000)) / 1000);
+          RkzPlus.Timer.create(toolbarEl, (new Date() - new Date(streamerData.startLiveTime * 1000)) / 1000);
         } else {
           setTimeout(check, 30000);
         }

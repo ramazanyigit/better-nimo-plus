@@ -120,7 +120,7 @@ RkzPlus.Chat = {
     modIcon = modIcon[0];
     modIconEl = document.createElement("img");
     modIconEl.src = this.MOD_ICON_URL;
-    modIconEl.classList.add("nimo-cr_decoration_icon");
+    modIconEl.classList.add("nimo-cr_decoration_icon", "rkz-custom-badge");
     modIconEl.style.width = "16px";
     modIconEl.style.height = "16px";
     modIcon.parentNode.replaceChild(modIconEl, modIcon);
@@ -135,7 +135,7 @@ RkzPlus.Chat = {
     modIcon = modIcon[0];
     modIconEl = document.createElement("img");
     modIconEl.src = this.MOD_ICON_URL;
-    modIconEl.classList.add("room-chatbot-manager-icon", "n-as-fs16", "n-as-inline-block");
+    modIconEl.classList.add("room-chatbot-manager-icon", "n-as-fs16", "n-as-inline-block", "rkz-custom-badge");
     modIconEl.style.width = "16px";
     modIconEl.style.height = "16px";
     modIcon.parentNode.replaceChild(modIconEl, modIcon);
@@ -150,7 +150,7 @@ RkzPlus.Chat = {
     adminIcon = adminIcon[0];
     adminIconEl = document.createElement("img");
     adminIconEl.src = this.ADMIN_ICON_URL;
-    adminIconEl.classList.add("nimo-room__chatroom__message-item__icon-streamer");
+    adminIconEl.classList.add("nimo-room__chatroom__message-item__icon-streamer", "rkz-custom-badge");
     adminIconEl.style.width = "16px";
     adminIconEl.style.height = "16px";
     adminIcon.parentNode.replaceChild(adminIconEl, adminIcon);

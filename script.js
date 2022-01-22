@@ -1,5 +1,30 @@
 RkzPlus.Emote.load();
 
+function fixChromeVideoBug(e) {
+  if (e && e.nodeName && e.nodeName.toLowerCase() === "video") {
+    const videoContainer = e.parentElement;
+    if (videoContainer && videoContainer.classList && videoContainer.classList.contains("video-player")) {
+      const videos = videoContainer.getElementsByTagName("video");
+      if (videos && videos.length > 1) {
+        videos[0].remove();
+      }
+
+      const current = document.querySelector(".speed-rate-control .rate-current");
+
+      if (!current) {
+        return;
+      }
+
+      document.querySelector(".speed-rate-control .rate-current").innerHTML = `${
+        document.getElementsByTagName("video")[0].playbackRate
+      }x`;
+      document.getElementsByTagName("video")[0].addEventListener("ratechange", function () {
+        document.querySelector(".speed-rate-control .rate-current").innerHTML = `${this.playbackRate}x`;
+      });
+    }
+  }
+}
+
 const username = RkzPlus.Core.getCookie("userName");
 new MutationObserver((e) => {
   for (const o of e) {
@@ -34,6 +59,8 @@ new MutationObserver((e) => {
 
           RkzPlus.Timer.inject(e);
           RkzPlus.Timer.offLiveRemoveTimer(e);
+
+          fixChromeVideoBug(e);
         }
       }
     }

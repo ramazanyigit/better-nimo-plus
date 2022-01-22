@@ -4,6 +4,11 @@
   border-bottom: 1px dotted black;
 }
 
+.emoticon-item {
+  position: relative;
+}
+
+.emoticon-item .BNTV_Emotetooltiptext,
 .BNTV_Emote .BNTV_Emotetooltiptext {
   font-size: 10pt;
   visibility: hidden;
@@ -16,12 +21,31 @@
 
   /* Position the tooltip */
   position: absolute;
-  z-index: 9;
+  z-index: 100;
   bottom: 100%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -40px;
 }
 
+.emoticon-item .BNTV_Emotetooltiptext {
+  width: 120px;
+  margin-left: -60px;
+  pointer-events: none;
+}
+
+.emoticon-item:nth-child(8n+1) .BNTV_Emotetooltiptext {
+  margin-left: -20px;
+}
+
+.emoticon-item:nth-child(8n+2) .BNTV_Emotetooltiptext {
+  margin-left: -50px;
+}
+
+.emoticon-item:nth-child(8n+8) .BNTV_Emotetooltiptext {
+  margin-left: -100px;
+}
+
+.emoticon-item:hover .BNTV_Emotetooltiptext,
 .BNTV_Emote:hover .BNTV_Emotetooltiptext {
   visibility: visible;
 }
@@ -29,6 +53,10 @@
 html,
 body {
   overflow-x: hidden !important;
+}
+
+body {
+  overflow-y: hidden !important;
 }
 
 .ChatModeTip-container {
@@ -220,6 +248,7 @@ body {
   height: 100% !important;
 }
 
+
 .nimo-theme-dark .nimo-room__main {
   background: #141414 !important;
   padding-bottom: 0px !important;
@@ -230,13 +259,22 @@ body {
   margin: 0 !important;
 }
 
-.nimo-room__theater-section > div:first-child {
-  flex-direction: column-reverse !important;
+.n-as-theater .nimo-room__theater-section > div:first-child {
+  height: 100vh !important;
 }
 
-.nimo-room__theater-section > div:nth-child(2) {
-  margin-bottom: 96px !important;
+.nimo-room__theater-section > div:first-child {
+  flex-direction: column-reverse !important;
+  height: calc(100vh - 60px) !important;
 }
+
+/* .nimo-room__theater-section > div:nth-child(2) {
+  margin-bottom: 96px !important;
+} */
+
+/* .nimo-hide-gift-shop .nimo-room__theater-section > div:nth-child(2) {
+  margin-bottom: 0px !important;
+} */
 
 .n-as-theater .nimo-room__theater-section > div:nth-child(2) {
   margin-bottom: 0px !important;
@@ -787,7 +825,7 @@ input:checked + .slider:before {
 }
 
 .nimo-hide-badges .nimo-scrollbar .nimo-user-level-badge,
-.nimo-hide-badges .nimo-scrollbar .nimo-cr_decoration_icon {
+.nimo-hide-badges .nimo-scrollbar .nimo-cr_decoration_icon:not(.rkz-custom-badge) {
   display: none !important;
 }
 

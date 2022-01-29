@@ -33,15 +33,15 @@
   pointer-events: none;
 }
 
-.emoticon-item:nth-child(8n+1) .BNTV_Emotetooltiptext {
+.emoticon-item:nth-child(8n + 1) .BNTV_Emotetooltiptext {
   margin-left: -20px;
 }
 
-.emoticon-item:nth-child(8n+2) .BNTV_Emotetooltiptext {
+.emoticon-item:nth-child(8n + 2) .BNTV_Emotetooltiptext {
   margin-left: -50px;
 }
 
-.emoticon-item:nth-child(8n+8) .BNTV_Emotetooltiptext {
+.emoticon-item:nth-child(8n + 8) .BNTV_Emotetooltiptext {
   margin-left: -100px;
 }
 
@@ -248,7 +248,6 @@ body {
   height: 100% !important;
 }
 
-
 .nimo-theme-dark .nimo-room__main {
   background: #141414 !important;
   padding-bottom: 0px !important;
@@ -263,7 +262,8 @@ body {
   height: 100vh !important;
 }
 
-.nimo-room__theater-section > div:first-child {
+.nimo-room__theater-section > div:not(.air-raids):first-child,
+.nimo-room__theater-section > .air-raids + div {
   flex-direction: column-reverse !important;
   height: calc(100vh - 60px) !important;
 }
@@ -803,7 +803,7 @@ input:checked + .slider:before {
   display: block;
 }
 
-.nimo-hide-gift-messages .MessageList .nimo-scrollbar > div.c2:not(.nimo-room__chatroom__message-item),
+.nimo-hide-gift-messages .MessageList .nimo-scrollbar > div.n-fx-sc.c2:not(.nimo-room__chatroom__message-item),
 .nimo-hide-follower-messages .MessageList .nimo-room__chatroom__message-item.c2,
 .nimo-hide-eye-catching-messages .MessageList .nimo-scrollbar > .nimo-room__pay-chat-message-item,
 .nimo-hide-eye-catching-messages .nimo-room__pay-chat-top-message-list,

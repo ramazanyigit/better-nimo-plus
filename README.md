@@ -21,6 +21,7 @@ It based on NimoTV Plus and BNTV extensions.
 - Fixed Air Raid visual bug.
 - Fixed Reply Button bug.
 - Fixed Leaderboard Nickname coloring in dark mode.
+- Fixed emote mention error.
 - Added Gift Box hide option in settings menu.
 - Improved dark mode colors.
 

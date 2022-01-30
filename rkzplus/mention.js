@@ -88,7 +88,7 @@ RkzPlus.Mention = {
 
     const replaceFn = (emote) => { 
       if (!emote) {
-        return '';
+        return undefined;
       }
 
       return emote.word;

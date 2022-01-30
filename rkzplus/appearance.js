@@ -72,4 +72,50 @@ RkzPlus.Appearance = {
     const lastEl = e.querySelector(".sub-block:last-child > *:last-child");
     lastEl.parentNode.insertBefore(downloadButton, lastEl);
   },
+
+  addEmptyTagToGiftbox: function (e) {
+    let el = e;
+
+    if (!e.classList.contains("nimo-room__chatroom__box-gift")) {
+      el = e.getElementsByClassName("nimo-room__chatroom__box-gift")[0];
+    }
+
+    if (!el) {
+      return;
+    }
+
+    el.classList.add("rkzplus-giftbox-empty");
+  },
+  addEmptyTagToGiftboxIfEggRemoved: function (e) {
+    let el = e;
+
+    if (!e.classList.contains("nimo-box-gift__box")) {
+      el = e.getElementsByClassName("nimo-box-gift__box")[0];
+    }
+
+    if (!el) {
+      return;
+    }
+
+    const giftBoxContainerEl = document.getElementsByClassName("nimo-room__chatroom__box-gift")[0];
+
+    if (!giftBoxContainerEl) {
+      return;
+    }
+
+    giftBoxContainerEl.classList.add("rkzplus-giftbox-empty");
+  },
+  removeEmptyTagFromGiftboxIfGiftboxNotEmpty: function (e) {
+    let el = e;
+
+    if (!e.classList.contains("nimo-box-gift__box")) {
+      el = e.getElementsByClassName("nimo-box-gift__box")[0];
+    }
+
+    if (!el) {
+      return;
+    }
+
+    document.getElementsByClassName("nimo-room__chatroom__box-gift")[0].classList.remove("rkzplus-giftbox-empty");
+  },
 };

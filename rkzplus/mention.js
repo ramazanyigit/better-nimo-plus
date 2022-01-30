@@ -86,7 +86,13 @@ RkzPlus.Mention = {
             });
     };
 
-    const replaceFn = (emote) => `${emote.word}`;
+    const replaceFn = (emote) => { 
+      if (!emote) {
+        return '';
+      }
+
+      return emote.word;
+    };
 
     const menuItemFn = (el_array, setItem, selected) => {
       const div = document.createElement("div");
@@ -99,8 +105,7 @@ RkzPlus.Mention = {
       }
       div.innerHTML =
         `<div class="nimo-room__chatroom__message-item__custom-emoticon-container" style="background: none;"><span class="nimo-image nimo-room__chatroom__message-item__custom-emoticon"><img src="${el_array.url}"/></span></div>` +
-        " " +
-        el_array.word;
+        " " + el_array.word;
       div.onclick = setItem;
       return div;
     };

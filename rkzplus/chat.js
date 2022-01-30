@@ -48,7 +48,7 @@ RkzPlus.Chat = {
           if (isCurrentUser) {
             RkzPlus.Emote.addEmoteUsage(word);
           }
-          
+
           hasReplaced = true;
           content[
             i

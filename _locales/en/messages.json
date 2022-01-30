@@ -80,6 +80,9 @@
   "settingHideGiftShop": {
     "message": "Hide gift shop"
   },
+  "settingHideChatroomGiftBox": {
+    "message": "Hide chatroom gift box"
+  },
   "settingAppearance": {
     "message": "Appearance"
   },

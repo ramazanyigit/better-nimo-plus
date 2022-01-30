@@ -24,4 +24,28 @@ RkzPlus.Core = {
     }
     return "";
   },
+  fixChromeVideoBug: function (e) {
+    if (e && e.nodeName && e.nodeName.toLowerCase() === "video") {
+      const videoContainer = e.parentElement;
+      if (videoContainer && videoContainer.classList && videoContainer.classList.contains("video-player")) {
+        const videos = videoContainer.getElementsByTagName("video");
+        if (videos && videos.length > 1) {
+          videos[0].remove();
+        }
+  
+        const current = document.querySelector(".speed-rate-control .rate-current");
+  
+        if (!current) {
+          return;
+        }
+  
+        document.querySelector(".speed-rate-control .rate-current").innerHTML = `${
+          document.getElementsByTagName("video")[0].playbackRate
+        }x`;
+        document.getElementsByTagName("video")[0].addEventListener("ratechange", function () {
+          document.querySelector(".speed-rate-control .rate-current").innerHTML = `${this.playbackRate}x`;
+        });
+      }
+    }
+  }
 };

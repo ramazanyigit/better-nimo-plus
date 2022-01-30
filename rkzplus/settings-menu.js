@@ -159,6 +159,15 @@ RkzPlus.SettingsMenu = {
         }
       })
     );
+    
+
+    settingsMenu.append(
+      this.createMenuItem(
+        chrome.i18n.getMessage("settingHideChatroomGiftBox"),
+        "hideChatroomGiftBox",
+        RkzPlus.Core.generateToggleBodyClassNameAction("nimo-hide-chatroom-gift-box")
+      )
+    );
 
     settingsMenu.append(this.createMenuHeader(chrome.i18n.getMessage("settingNotifications")));
     settingsMenu.append(

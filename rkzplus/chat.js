@@ -1,3 +1,6 @@
+const messages = [];
+let messageIdx = -1;
+
 RkzPlus.Chat = {
   MOD_ICON_URL: chrome.runtime.getURL("images/mod_icon.png"),
   ADMIN_ICON_URL: chrome.runtime.getURL("images/admin_icon.png"),
@@ -173,5 +176,50 @@ RkzPlus.Chat = {
     }
 
     nicknameEl.style.color = color;
+  },
+  moveCaretToEnd: function (el) {
+    if (typeof el.selectionStart == "number") {
+      el.selectionStart = el.selectionEnd = el.value.length;
+    } else if (typeof el.createTextRange != "undefined") {
+      el.focus();
+      var range = el.createTextRange();
+      range.collapse(false);
+      range.select();
+    }
+  },
+  injectChatHistory: function (e) {
+    const el = e.getElementsByClassName("nimo-chat-box__input")[0];
+
+    if (!el) {
+      return;
+    }
+
+    el.addEventListener("keydown", function (e) {
+      switch (e.key) {
+        case "Up":
+        case "ArrowUp":
+          if (messageIdx < messages.length - 1) {
+            el.value = messages[++messageIdx];
+            RkzPlus.Chat.moveCaretToEnd(el);
+            window.setTimeout(function () {
+              RkzPlus.Chat.moveCaretToEnd(el);
+            }, 1);
+          }
+          break;
+        case "Down":
+        case "ArrowDown":
+          if (messageIdx > -1) {
+            el.value = messages[--messageIdx] || "";
+            RkzPlus.Chat.moveCaretToEnd(el);
+            window.setTimeout(function () {
+              RkzPlus.Chat.moveCaretToEnd(el);
+            }, 1);
+          }
+          break;
+
+        case "Enter":
+          messages.unshift(el.value);
+      }
+    });
   },
 };

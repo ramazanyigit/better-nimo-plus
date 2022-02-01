@@ -17,12 +17,14 @@ It based on NimoTV Plus and BNTV extensions.
 - Added settings menu for hiding gifs, followers messages etc.
 - Improved streamer and moderator icons.
 
-### Changelog 0.3.6:
+### Changelog 0.4.0:
 - Fixed Air Raid visual bug.
 - Fixed Reply Button bug.
 - Fixed Leaderboard Nickname coloring in dark mode.
 - Fixed emote mention error.
 - Added Gift Box hide option in settings menu.
+- Added chat history for chatbox input.
+- Added live streamer count badge for REKKITZ+ Watcher.
 - Improved dark mode colors.
 
 ### Changelog 0.3.5:

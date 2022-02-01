@@ -16,3 +16,14 @@ function detectBrowser() {
 
   return "chrome";
 }
+
+function setBadgeText(text) {
+  if (text <= 0) {
+    chrome.browserAction.setBadgeText({});
+    return;
+  }
+
+  chrome.browserAction.setBadgeBackgroundColor({ color: "#F00" }, () => {
+    chrome.browserAction.setBadgeText({ text: `${text}` });
+  });
+}

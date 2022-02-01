@@ -39,6 +39,7 @@ new MutationObserver((e) => {
           RkzPlus.Core.fixChromeVideoBug(e);
           RkzPlus.Appearance.addEmptyTagToGiftbox(e);
           RkzPlus.Appearance.removeEmptyTagFromGiftboxIfGiftboxNotEmpty(e);
+          RkzPlus.Chat.injectChatHistory(e);
         }
       }
     }

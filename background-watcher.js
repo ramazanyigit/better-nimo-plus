@@ -89,7 +89,9 @@ const triggerWatcher = function () {
             }
           });
 
-          chrome.storage.local.set({ "rkzplus-follow-links": await Promise.all(channels) });
+          const links = await Promise.all(channels);
+          setBadgeText(links.filter((ch) => ch.isLive).length || 0);
+          chrome.storage.local.set({ "rkzplus-follow-links": links });
           setTimeout(refreshLinks, 30000);
         });
       };

@@ -25,7 +25,6 @@ chrome.permissions.contains(
   },
   (result) => {
     if (result) {
-      chrome.storage.local.set({ "rkzplus-watcher-active": true });
       initProgram();
     } else {
       initEnable();

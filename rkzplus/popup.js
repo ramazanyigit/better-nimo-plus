@@ -25,7 +25,6 @@ chrome.permissions.contains(
   },
   (result) => {
     if (result) {
-      chrome.storage.local.set({ "rkzplus-watcher-active": true });
       initProgram();
     } else {
       initEnable();
@@ -68,6 +67,8 @@ function initProgram() {
 
       return a.nickname.localeCompare(b.nickname);
     });
+
+    setBadgeText(links.filter((ch) => ch.isLive).length || 0);
     renderLinks();
   });
 
@@ -100,6 +101,7 @@ function initProgram() {
         });
 
         chrome.storage.local.set({ "rkzplus-follow-links": links });
+        setBadgeText(links.filter((ch) => ch.isLive).length || 0);
         renderLinks();
       }
     );
@@ -210,6 +212,7 @@ function renderLink(link, idx = -1) {
     button.className = "remove-button";
     button.addEventListener("click", function () {
       links.splice(idx, 1);
+      setBadgeText(links.filter((ch) => ch.isLive).length || 0);
       chrome.storage.local.set({ "rkzplus-follow-links": links });
       renderLinks();
     });
@@ -222,6 +225,7 @@ function renderLink(link, idx = -1) {
     button.className = "add-button";
     button.addEventListener("click", function () {
       links.push(link);
+      setBadgeText(links.filter((ch) => ch.isLive).length || 0);
       chrome.storage.local.set({ "rkzplus-follow-links": links });
       this.remove();
       renderLinks();

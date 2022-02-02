@@ -80,6 +80,9 @@
   "settingHideGiftShop": {
     "message": "Hediye mağazasını gizle"
   },
+  "settingHideChatroomGiftBox": {
+    "message": "Sohbetteki hediye kutusunu gizle"
+  },
   "settingAppearance": {
     "message": "Görünüm"
   },

@@ -44,7 +44,6 @@ const triggerWatcher = function () {
             return;
           }
 
-          console.log(`RKZPLUS Watcher: Fetch operation is starting for ${channels.length} channels.`);
           channels = channels.map(async (ch) => {
             const data = await fetchStreamerData(ch.url);
 
@@ -90,8 +89,9 @@ const triggerWatcher = function () {
             }
           });
 
-          chrome.storage.local.set({ "rkzplus-follow-links": await Promise.all(channels) });
-          console.log(`RKZPLUS Watcher: Fetch operation has been done for ${channels.length} channels.`);
+          const links = await Promise.all(channels);
+          setBadgeText(links.filter((ch) => ch.isLive).length || 0);
+          chrome.storage.local.set({ "rkzplus-follow-links": links });
           setTimeout(refreshLinks, 30000);
         });
       };

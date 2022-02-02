@@ -16,7 +16,10 @@ function setBadgeText(text) {
     return;
   }
 
-  chrome.browserAction.setBadgeTextColor({ color: "#FFF" });
+  if (detectBrowser() === "firefox") {
+    chrome.browserAction.setBadgeTextColor({ color: "#FFF" });
+  }
+  
   chrome.browserAction.setBadgeBackgroundColor({ color: "#F00" }, () => {
     chrome.browserAction.setBadgeText({ text: `${text}` });
   });

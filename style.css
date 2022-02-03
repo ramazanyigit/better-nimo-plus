@@ -150,9 +150,12 @@ body {
   display: none !important;
 }
 
-.nimo-hide-chatroom-gift-box .nimo-room__chatroom .nimo-room__chatroom__box-gift 
-
-.nimo-room .n-as-theater .nimo-room__gift-shop {
+.nimo-hide-chatroom-gift-box
+  .nimo-room__chatroom
+  .nimo-room__chatroom__box-gift
+  .nimo-room
+  .n-as-theater
+  .nimo-room__gift-shop {
   display: none !important;
 }
 
@@ -273,7 +276,8 @@ body {
   margin: 0 !important;
 }
 
-.n-as-theater .nimo-room__theater-section > div:first-child {
+.n-as-theater .nimo-room__theater-section > div:not(.air-raids):first-child,
+.n-as-theater .nimo-room__theater-section > .air-raids + div {
   height: 100vh !important;
 }
 

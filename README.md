@@ -17,6 +17,9 @@ It based on NimoTV Plus and BNTV extensions.
 - Added settings menu for hiding gifs, followers messages etc.
 - Improved streamer and moderator icons.
 
+### Changelog 0.4.1:
+- Fixed theater mode visual bug.
+
 ### Changelog 0.4.0:
 - Fixed Air Raid visual bug.
 - Fixed Reply Button bug.

@@ -17,7 +17,7 @@ It based on NimoTV Plus and BNTV extensions.
 - Added settings menu for hiding gifs, followers messages etc.
 - Improved streamer and moderator icons.
 
-### Changelog 0.4.1:
+### Changelog 0.4.2:
 - Fixed chat history and mentioning menu controls bug.
 
 ### Changelog 0.4.1:

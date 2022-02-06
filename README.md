@@ -18,6 +18,9 @@ It based on NimoTV Plus and BNTV extensions.
 - Improved streamer and moderator icons.
 
 ### Changelog 0.4.1:
+- Fixed chat history and mentioning menu controls bug.
+
+### Changelog 0.4.1:
 - Fixed theater mode visual bug.
 
 ### Changelog 0.4.0:

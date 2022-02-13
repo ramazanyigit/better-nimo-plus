@@ -17,6 +17,10 @@ It based on NimoTV Plus and BNTV extensions.
 - Added settings menu for hiding gifs, followers messages etc.
 - Improved streamer and moderator icons.
 
+### Changelog 0.4.3:
+- Chat can be positioned into left side of the page.
+- Hide chat option hides completely chat bar and add settings menu into header.
+
 ### Changelog 0.4.2:
 - Fixed chat history and mentioning menu controls bug.
 

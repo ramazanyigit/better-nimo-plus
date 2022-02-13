@@ -287,6 +287,14 @@ body {
   height: calc(100vh - 60px) !important;
 }
 
+.nimo-rkzplus-reverse-chat .nimo-room__theater-section {
+  flex-direction: row-reverse !important;
+}
+
+.nimo-rkzplus-hide-chat .nimo-room__theater-section .n-as-w340px {
+  display: none !important;
+}
+
 /* .nimo-room__theater-section > div:nth-child(2) {
   margin-bottom: 96px !important;
 } */
@@ -605,8 +613,16 @@ textarea {
   margin-left: 10px;
   position: absolute;
   bottom: 100px;
+  left: 0;
   overflow-x: auto;
   z-index: 9002;
+}
+
+.BNTV_Settings_MENU.bntv-menu-header {
+  top: 20px;
+  right: 0;
+  left: unset;
+  bottom: unset;
 }
 
 .BNTV_Settings_MENU_CONTENT {

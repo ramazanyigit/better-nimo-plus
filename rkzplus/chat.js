@@ -198,7 +198,7 @@ RkzPlus.Chat = {
       switch (e.key) {
         case "Up":
         case "ArrowUp":
-          if (messageIdx < messages.length - 1) {
+          if (messageIdx < messages.length - 1 && !RkzPlus.Mention.isMentionActive()) {
             el.value = messages[++messageIdx];
             RkzPlus.Chat.moveCaretToEnd(el);
             window.setTimeout(function () {
@@ -208,7 +208,7 @@ RkzPlus.Chat = {
           break;
         case "Down":
         case "ArrowDown":
-          if (messageIdx > -1) {
+          if (messageIdx > -1 && !RkzPlus.Mention.isMentionActive()) {
             el.value = messages[--messageIdx] || "";
             RkzPlus.Chat.moveCaretToEnd(el);
             window.setTimeout(function () {

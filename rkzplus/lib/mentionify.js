@@ -1,20 +1,12 @@
 class Mentionify {
-  constructor(
-    ref,
-    menuRef,
-    resolveFn,
-    replaceFn,
-    menuItemFn,
-    triggerKey,
-    triggerLen = 0,
-    showMax = 20
-  ) {
+  constructor(ref, menuRef, resolveFn, replaceFn, menuItemFn, triggerKey, triggerLen = 0, onMenuActiveFn, showMax = 20) {
     this.ref = ref;
     this.menuRef = menuRef;
     this.resolveFn = resolveFn;
     this.replaceFn = replaceFn;
     this.menuItemFn = menuItemFn;
     this.options = [];
+    this.onMenuActiveChange = onMenuActiveFn;
 
     this.makeOptions = this.makeOptions.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
@@ -33,7 +25,7 @@ class Mentionify {
     this.menuRef.style.position = "absolute";
     this.menuRef.style.left = "0";
     this.menuRef.style.right = "0";
-    this.menuRef.style.bottom = `${this.ref.scrollHeight+2}px`;
+    this.menuRef.style.bottom = `${this.ref.scrollHeight + 2}px`;
   }
 
   async makeOptions(query) {
@@ -52,7 +44,9 @@ class Mentionify {
       this.left = undefined;
       this.top = undefined;
       this.triggerIdx = undefined;
+      this.menuActive = false;
       this.renderMenu();
+      this.onMenuActiveChange(false);
     }, 0);
   }
 
@@ -76,9 +70,7 @@ class Mentionify {
     const textBeforeCaret = this.ref.value.slice(0, positionIndex);
     const tokens = textBeforeCaret.split(/\s/);
     const lastToken = tokens[tokens.length - 1];
-    const triggerIdx = textBeforeCaret.endsWith(lastToken)
-      ? textBeforeCaret.length - lastToken.length
-      : -1;
+    const triggerIdx = textBeforeCaret.endsWith(lastToken) ? textBeforeCaret.length - lastToken.length : -1;
     const maybeTrigger = textBeforeCaret[triggerIdx];
     const keystrokeTriggered = maybeTrigger === this.triggerKey;
 
@@ -103,6 +95,8 @@ class Mentionify {
       this.left = window.scrollX + left + this.ref.scrollLeft;
       this.top = window.scrollY + top - this.ref.scrollTop;
       this.triggerIdx = triggerIdx;
+      this.menuActive = true;
+      this.onMenuActiveChange(true);
       this.renderMenu();
     }, 0);
   }
@@ -148,20 +142,13 @@ class Mentionify {
     this.menuRef.innerHTML = "";
 
     this.options.forEach((option, idx) => {
-      const child = this.menuItemFn(
-        option,
-        this.selectItem(idx),
-        this.active === idx
-      );
+      const child = this.menuItemFn(option, this.selectItem(idx), this.active === idx);
       this.menuRef.appendChild(child);
 
       if (this.active === idx) {
         const diff = child.offsetTop - this.menuRef.offsetHeight;
         if (diff > 0) {
-          this.menuRef.scrollTop += Math.min(
-            diff + child.offsetHeight,
-            this.menuRef.scrollHeight
-          );
+          this.menuRef.scrollTop += Math.min(diff + child.offsetHeight, this.menuRef.scrollHeight);
         }
       }
     });

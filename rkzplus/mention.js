@@ -52,6 +52,9 @@ RkzPlus.Mention = {
       menuItemFn,
       "@",
       0,
+      function (status) {
+        RkzPlus.Mention.isMentionMenuActive = status;
+      },
       max
     );
   },
@@ -86,7 +89,7 @@ RkzPlus.Mention = {
             });
     };
 
-    const replaceFn = (emote) => { 
+    const replaceFn = (emote) => {
       if (!emote) {
         return undefined;
       }
@@ -105,7 +108,8 @@ RkzPlus.Mention = {
       }
       div.innerHTML =
         `<div class="nimo-room__chatroom__message-item__custom-emoticon-container" style="background: none;"><span class="nimo-image nimo-room__chatroom__message-item__custom-emoticon"><img src="${el_array.url}"/></span></div>` +
-        " " + el_array.word;
+        " " +
+        el_array.word;
       div.onclick = setItem;
       return div;
     };
@@ -117,7 +121,10 @@ RkzPlus.Mention = {
       replaceFn,
       menuItemFn,
       ":",
-      2
+      2,
+      function (status) {
+        RkzPlus.Mention.isEmoteMenuActive = status;
+      }
     );
   },
   injectFullscreen: function (e) {
@@ -134,4 +141,9 @@ RkzPlus.Mention = {
     this.mentionChat("rkzplus-fullscreen-chat-input", 4);
     this.mentionEmote("rkzplus-fullscreen-chat-input");
   },
+  isEmoteMenuActive: false,
+  isMentionMenuActive: false,
+  isMentionActive: function() {
+    return RkzPlus.Mention.isEmoteMenuActive || RkzPlus.Mention.isMentionMenuActive;
+  }
 };

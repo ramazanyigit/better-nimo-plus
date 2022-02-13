@@ -23,7 +23,7 @@ new MutationObserver((e) => {
         } else if (RkzPlus.Chat.isBotMessage(e)) {
           RkzPlus.Chat.enrichMessage(username, e, true);
         } else {
-          RkzPlus.SettingsMenu.injectMenuIcon(e);
+          RkzPlus.SettingsMenu.injectMenuIcon(e, RkzPlus.Settings.get('hideChat'));
 
           RkzPlus.Appearance.replaceAudienceIcon(e);
           RkzPlus.Appearance.injectClipControls(e);

@@ -24,6 +24,8 @@ RkzPlus.Settings = {
       hideBadges: false,
       hideGiftShop: false,
       hideChatroomGiftBox: false,
+      reverseChatStatus: false,
+      hideChat: false,
     };
 
     this._settings = Object.assign(defaultSettings, JSON.parse(localStorage.getItem("settings") || "{}"));

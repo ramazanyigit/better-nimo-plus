@@ -92,6 +92,9 @@
   "settingMessages": {
     "message": "Chat Messages"
   },
+  "settingsReverseChatPos": {
+    "message": "View the chat on the left of the page"
+  },
   "watcherTitle": {
     "message": "REKKITZ+ Watcher Beta"
   },

@@ -92,6 +92,9 @@
   "settingMessages": {
     "message": "Sohbet Mesajları"
   },
+  "settingsReverseChatPos": {
+    "message": "Sohbeti sayfanın sol tarafına al"
+  },
   "watcherTitle": {
     "message": "REKKITZ+ Watcher Beta"
   },

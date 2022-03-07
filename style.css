@@ -324,9 +324,9 @@ body {
   margin: 0 !important;
 }
 
-.nimo-room__main > div:nth-child(3) {
+/* .nimo-room__main > div:nth-child(3) {
   margin-top: 2rem !important;
-}
+} */
 
 .nimo-player__room-meta {
   display: none !important;

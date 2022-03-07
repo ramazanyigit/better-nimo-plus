@@ -10,12 +10,16 @@ It based on NimoTV Plus and BNTV extensions.
 - Removed followers messages in chat.
 - Changed popularity icon from people to star.
 - Improved user tagging features in chat.
-- Support for BNTV emotes. Added both usage types of emotes. e.g. KEKW or :KEKW: 
+- Support for BNTV emotes. Added both usage types of emotes. e.g. KEKW or :KEKW:
 - Added emote mentions with semicolon ":". E.g. :KEKW
 - Added BNTV emotes into emotes section with search bar.
 - Added user mentions with "@". e.g. @dev...
 - Added settings menu for hiding gifs, followers messages etc.
 - Improved streamer and moderator icons.
+
+### Changelog 0.4.4:
+- Extension improved by NimoTV's new design.
+- Bugfixes for new NimoTV design.
 
 ### Changelog 0.4.3:
 - Chat can be positioned into left side of the page.
@@ -57,7 +61,7 @@ It based on NimoTV Plus and BNTV extensions.
 - Added emote mentions with semicolon ":". E.g. :KEKW
 - Added user mentions with "@". E.g. @dev...
 - Added settings menu for hiding gifs, followers messages etc.
-- Replaced 1080p video feed with source feed. 
+- Replaced 1080p video feed with source feed.
 - Added both usage types of emotes. E.g; KEKW or :KEKW:
 
 ### Changelog 0.1.2:

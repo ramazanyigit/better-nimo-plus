@@ -39,7 +39,6 @@ new MutationObserver((e) => {
           RkzPlus.Core.fixChromeVideoBug(e);
           RkzPlus.Appearance.addEmptyTagToGiftbox(e);
           RkzPlus.Appearance.removeEmptyTagFromGiftboxIfGiftboxNotEmpty(e);
-          RkzPlus.Appearance.removeUnnecessarySpaces(e);
 
           RkzPlus.Chat.injectChatHistory(e);
         }

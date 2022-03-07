@@ -118,8 +118,4 @@ RkzPlus.Appearance = {
 
     document.getElementsByClassName("nimo-room__chatroom__box-gift")[0].classList.remove("rkzplus-giftbox-empty");
   },
-  removeUnnecessarySpaces: function (e) {
-    // Remove stupid margin-top from chat.
-    document.getElementsByClassName("nimo-room__main__sider")[0].style = "margin-top: 0px !important;";
-  },
 };

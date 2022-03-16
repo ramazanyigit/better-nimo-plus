@@ -80,6 +80,10 @@ body {
   display: none !important;
 }
 
+.nimo-hide-leaderboard .nimo-room .nimo-room__rank + div {
+  border-radius: 4px;
+}
+
 .nimo-hide-sidebar #side-bar {
   display: none !important;
 }
@@ -245,8 +249,6 @@ body {
 
 .nimo-room.has-head-img .nimo-room__main {
   margin-top: 0px !important;
-  padding-bottom: 0px !important;
-  padding-top: 0px !important;
 }
 
 .MessageList .nimo-fans-badge__name {
@@ -261,16 +263,14 @@ body {
   display: none !important;
 }
 
-.nimo-room__theater-section {
-  max-height: calc(100vh - 60px + 96px) !important;
-  height: 100% !important;
-}
+/* .nimo-room__theater-section {
+  max-height: calc(100vh - 68px + 96px) !important;
+  height: calc(100vh - 76px);
+} */
 
-.nimo-theme-dark .nimo-room__main {
+/* .nimo-theme-dark .nimo-room__main {
   background: #141414 !important;
-  padding-bottom: 0px !important;
-  padding-top: 0px !important;
-}
+} */
 
 .nimo-room__theater-section > div {
   margin: 0 !important;
@@ -284,15 +284,20 @@ body {
 .nimo-room__theater-section > div:not(.air-raids):first-child,
 .nimo-room__theater-section > .air-raids + div {
   flex-direction: column-reverse !important;
-  height: calc(100vh - 60px) !important;
+  height: calc(100vh - 76px) !important;
 }
 
-.nimo-rkzplus-reverse-chat .nimo-room__theater-section {
+.nimo-rkzplus-reverse-chat .nimo-room__main {
   flex-direction: row-reverse !important;
+  display: flex;
 }
 
-.nimo-rkzplus-hide-chat .nimo-room__theater-section .n-as-w340px {
+.nimo-rkzplus-hide-chat .nimo-room__main__sider {
   display: none !important;
+}
+
+.nimo-rkzplus-hide-chat .nimo-room__main__container {
+  width: 100% !important;
 }
 
 /* .nimo-room__theater-section > div:nth-child(2) {
@@ -403,6 +408,7 @@ body {
 }
 
 .nimo-hide-recommended-streamers .nimo-r_recommend,
+.nimo-hide-recommended-streamers .n-fx-bn .nimo-room-recommend-list,
 .nimo-hide-recommended-streamers .nimo-player .off-live .recommend-list,
 .nimo-hide-recommended-streamers .nimo-player .off-live .off-live-wrapper .title,
 .nimo-hide-recommended-streamers .nimo-player .off-live .recommend-more {
@@ -876,4 +882,37 @@ input:checked + .slider:before {
 
 .nimo-hide-gift-shop .nimo-room__gift-shop {
   display: none !important;
+}
+
+.nimo-room__main .nimo-room__main__sider {
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  width: 350px;
+  margin-left: 8px;
+  height: calc(100vh - 76px) !important;
+}
+
+body.n-as-theater .nimo-room__main__sider {
+  height: unset !important;
+  bottom: 0;
+  position: fixed !important;
+}
+
+.nimo-hide-gift-shop .nimo-room__theater-section .n-fx-col .nimo-rm.bc1 {
+  border-radius: 0 0 4px 4px;
+}
+
+.nimo-rkzplus-reverse-chat .nimo-room__main .nimo-room__main__sider {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+body.n-as-theater.nimo-rkzplus-reverse-chat .nimo-room__main__sider {
+  right: unset;
+  left: 0;
+}
+
+body.n-as-theater.nimo-rkzplus-reverse-chat .nimo-room__theater-section {
+  right: 0;
+  left: 350px;
 }

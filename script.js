@@ -2,6 +2,8 @@ RkzPlus.Emote.load();
 
 const username = RkzPlus.Core.getCookie("userName");
 new MutationObserver((e) => {
+  RkzPlus.Core.maximizeResolution(e);
+
   for (const o of e) {
     if ("childList" === o.type) {
       for (const e of o.removedNodes) {
@@ -37,7 +39,6 @@ new MutationObserver((e) => {
           RkzPlus.Timer.offLiveRemoveTimer(e);
 
           RkzPlus.Core.fixChromeVideoBug(e);
-          RkzPlus.Core.maximizeResolution(e);
           RkzPlus.Appearance.addEmptyTagToGiftbox(e);
           RkzPlus.Appearance.removeEmptyTagFromGiftboxIfGiftboxNotEmpty(e);
 

@@ -49,7 +49,12 @@ RkzPlus.Core = {
     }
   },
   maximizeResolution: function (e) {
-    if (RkzPlus.Settings.get("enableMaxResolution"))
-      document.getElementsByClassName("rate-control_list")[0].children[0].click();
+    if (RkzPlus.Settings.get("enableMaxResolution")) {
+      const rate = document.getElementsByClassName("rate-control_list")[0].children[0];
+      if (!rate.className.includes("selected")) {
+        rate.click();
+        console.log("[REKKITZ+]: Auto-Max Resolution Enabled!");
+      }
+    }
   },
 };

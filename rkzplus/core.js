@@ -32,13 +32,13 @@ RkzPlus.Core = {
         if (videos && videos.length > 1) {
           videos[0].remove();
         }
-  
+
         const current = document.querySelector(".speed-rate-control .rate-current");
-  
+
         if (!current) {
           return;
         }
-  
+
         document.querySelector(".speed-rate-control .rate-current").innerHTML = `${
           document.getElementsByTagName("video")[0].playbackRate
         }x`;
@@ -47,5 +47,14 @@ RkzPlus.Core = {
         });
       }
     }
-  }
+  },
+  maximizeResolution: function (e) {
+    if (RkzPlus.Settings.get("enableMaxResolution")) {
+      const rate = document.getElementsByClassName("rate-control_list")[0].children[0];
+      if (!rate.className.includes("selected")) {
+        rate.click();
+        console.log("[REKKITZ+]: Auto-Max Resolution Enabled!");
+      }
+    }
+  },
 };

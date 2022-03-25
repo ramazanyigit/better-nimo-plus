@@ -2,6 +2,8 @@ RkzPlus.Emote.load();
 
 const username = RkzPlus.Core.getCookie("userName");
 new MutationObserver((e) => {
+  RkzPlus.Core.maximizeResolution(e);
+
   for (const o of e) {
     if ("childList" === o.type) {
       for (const e of o.removedNodes) {
@@ -23,7 +25,7 @@ new MutationObserver((e) => {
         } else if (RkzPlus.Chat.isBotMessage(e)) {
           RkzPlus.Chat.enrichMessage(username, e, true);
         } else {
-          RkzPlus.SettingsMenu.injectMenuIcon(e, RkzPlus.Settings.get('hideChat'));
+          RkzPlus.SettingsMenu.injectMenuIcon(e, RkzPlus.Settings.get("hideChat"));
 
           RkzPlus.Appearance.replaceAudienceIcon(e);
           RkzPlus.Appearance.injectClipControls(e);

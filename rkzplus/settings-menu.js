@@ -6,7 +6,10 @@ RkzPlus.SettingsMenu = {
 
     let iconContainer;
     if (injectIntoHeader) {
-      if (document.querySelector(".nimo-header-minor-menu .nimo-header-user-info") && !document.getElementById("BNTV_Settings_MENU")) {
+      if (
+        document.querySelector(".nimo-header-minor-menu .nimo-header-user-info") &&
+        !document.getElementById("BNTV_Settings_MENU")
+      ) {
         iconContainer = document.getElementsByClassName("nimo-header-minor-menu")[0];
       }
     } else {
@@ -39,12 +42,9 @@ RkzPlus.SettingsMenu = {
     menuWrapper.append(icon);
     iconContainer.prepend(menuWrapper);
 
-    this.injectMenu(
-      menuWrapper,
-      injectIntoHeader
-    );
+    this.injectMenu(menuWrapper, injectIntoHeader);
   },
-  createMenuItem: function (label, key, action = function () { }, trigger = true) {
+  createMenuItem: function (label, key, action = function () {}, trigger = true) {
     const optionValue = RkzPlus.Settings.get(key) === true;
     const item = document.createElement("div");
     item.classList.add("BNTV_Settings_MENU_ITEM");
@@ -159,18 +159,14 @@ RkzPlus.SettingsMenu = {
 
     /// OPTION 3: HIDE CHAT
     settingsMenu.append(
-      this.createMenuItem(
-        chrome.i18n.getMessage("settingHideChat"),
-        "hideChat",
-        function (value, initial) {
-          if (!initial) {
-            document.getElementById("BNTV_Settings_MENU")?.remove()
-            document.getElementById("rkzplus-settings-icon")?.remove()
-            RkzPlus.SettingsMenu.injectMenuIcon(document.body, value)
-          }
-          RkzPlus.Core.generateToggleBodyClassNameAction("nimo-rkzplus-hide-chat")(value)
+      this.createMenuItem(chrome.i18n.getMessage("settingHideChat"), "hideChat", function (value, initial) {
+        if (!initial) {
+          document.getElementById("BNTV_Settings_MENU")?.remove();
+          document.getElementById("rkzplus-settings-icon")?.remove();
+          RkzPlus.SettingsMenu.injectMenuIcon(document.body, value);
         }
-      )
+        RkzPlus.Core.generateToggleBodyClassNameAction("nimo-rkzplus-hide-chat")(value);
+      })
     );
 
     settingsMenu.append(
@@ -283,6 +279,13 @@ RkzPlus.SettingsMenu = {
         "hideBadges",
         RkzPlus.Core.generateToggleBodyClassNameAction("nimo-hide-badges")
       )
+    );
+
+    settingsMenu.append(this.createMenuHeader(chrome.i18n.getMessage("settingOther")));
+
+    /// OPTION 19: ENABLE MAX RESOLUTION
+    settingsMenu.append(
+      this.createMenuItem(chrome.i18n.getMessage("settingEnableMaxResolution"), "enableMaxResolution")
     );
 
     if (injectIntoHeader) {

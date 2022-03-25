@@ -26,6 +26,7 @@ RkzPlus.Settings = {
       hideChatroomGiftBox: false,
       reverseChatStatus: false,
       hideChat: false,
+      enableMaxResolution: false,
     };
 
     this._settings = Object.assign(defaultSettings, JSON.parse(localStorage.getItem("settings") || "{}"));
